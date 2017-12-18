@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Yandex Kassa Example</title>
+</head>
+<body>
+    <h3>Add payment</h3>
+    {{ form_start(form) }}
+    <div>
+        <label>Sum</label>
+        {{ form_widget(form.sum) }}
+        {{ form_errors(form.sum) }}
+    </div>
+    <button class="btn btn-primary" type="submit">Next ></button>
+    {{ form_end(form) }}
+</body>
+</html>

@@ -1,0 +1,7 @@
+services:
+    payment.listener:
+        class: AppBundle\EventListener\PaymentListener
+        calls:
+            - [setContainer, [ "@service_container" ]]
+        tags:
+            - { name: kernel.event_listener, event: payment.state_change, method: onPaymentStateChange }

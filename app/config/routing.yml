@@ -1,0 +1,13 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type:     annotation
+
+homepage:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    default/homepage.html.twig
+
+rispo_yandexkassa:
+    resource: "@RispoYandexKassaBundle/Resources/config/routing.yml"
+    prefix:   /

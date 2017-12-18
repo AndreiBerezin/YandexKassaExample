@@ -1,0 +1,19 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: mysql
+    database_user: mysql
+    database_password: mysql
+    mailer_transport: sendmail
+    mailer_host: localhost
+    mailer_user: mailuser
+    mailer_password: password
+    mailer_from: mailuser@gmail.com
+    locale: ru
+    secret: 'topsecret'
+
+    rispo_yandexkassa_shopId: number
+    rispo_yandexkassa_scid: number
+    rispo_yandexkassa_ShopPassword: pass
+    rispo_yandexkassa_test: false
