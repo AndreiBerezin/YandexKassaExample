@@ -1,5 +1,7 @@
 Example how to use RispoYandexKassaBundle in symfony 3 application
-===
+==================================================================
+Example for https://github.com/AndreiBerezin/RispoYandexKassaBundle
+
 How to use:
 1) get composer
 2) composer.phar install
