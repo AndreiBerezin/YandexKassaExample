@@ -9,6 +9,7 @@ How to use:
 4) php bin/console doctrine:database:create
 5) php bin/console doctrine:schema:create
 6) test payments :) 
+
 Add payment -> confirm -> redirect to Yandex kassa -> pay from card -> return to application
 
 
