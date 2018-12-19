@@ -72,6 +72,24 @@ class IndexController extends Controller
             /** @var PaymentInstructionInterface $instruction */
             $instruction = $form->getData();
             $instruction->getExtendedData()->set('customerNumber', '666');
+            // more info in https://tech.yandex.ru/money/doc/payment-solution/payment-form/payment-form-receipt-docpage/
+            $onlineReceipt = [
+                'customerContact' => '+79091112233', //phone or email
+                'taxSystem' => 1, // not required param
+                'items' => [
+                    [
+                        'quantity' => 1,
+                        'price' => [
+                            'amount' => $payData['sum']
+                        ],
+                        'tax' =>  3,
+                        'text' => 'Test commodity name',
+                        'paymentSubjectType' => 'commodity',
+                        'paymentMethodType' => 'full_prepayment'
+                    ]
+                ]
+            ];
+            $instruction->getExtendedData()->set('ym_merchant_receipt', json_encode($onlineReceipt));
             $instruction->getExtendedData()->set('return_url', $this->generateUrl('index_account_finish', ['status' => '0']));
             $instruction->getExtendedData()->set('cancel_url', $this->generateUrl('index_account_finish', ['status' => '1']));
 
